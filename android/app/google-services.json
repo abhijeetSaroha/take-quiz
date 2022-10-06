@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "473227743228",
+    "project_id": "takequiz-6484b",
+    "storage_bucket": "takequiz-6484b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473227743228:android:70ac44894a86906e4f2c79",
+        "android_client_info": {
+          "package_name": "com.example.takequiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473227743228-m1sjjg2qm89cnlkflhooquu1ulprkdv6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC58lP4VhvJpmLF3F19zwG8N1xczK5fi8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473227743228-m1sjjg2qm89cnlkflhooquu1ulprkdv6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
