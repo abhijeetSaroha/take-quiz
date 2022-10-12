@@ -8,6 +8,8 @@ Reference get firebaseStorage => FirebaseStorage.instance.ref();
 
 final QuestionPaperRF = fireStore.collection('questionPapers');
 
-DocumentReference questionRF(
-        {required String paperID, required String questionId}) =>
-    QuestionPaperRF.doc(paperID).collection("questions").doc(questionId);
+DocumentReference questionRF({
+  required String paperId,
+  required String questionId,
+}) =>
+    QuestionPaperRF.doc(paperId).collection("questions").doc(questionId);

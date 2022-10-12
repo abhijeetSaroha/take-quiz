@@ -1,4 +1,7 @@
 # Miscellaneous
+.dart_tool
+.vscode
+.idea
 *.class
 *.log
 *.pyc

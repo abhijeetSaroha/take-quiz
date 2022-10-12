@@ -61,7 +61,7 @@ class DataUploader extends GetxController {
       );
       for (var questions in paper.questions!) {
         final questionPath = questionRF(
-          paperID: paper.id,
+          paperId: paper.id,
           questionId: questions.id,
         );
 
