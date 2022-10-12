@@ -45,7 +45,7 @@ class AppIntroductionScreen extends StatelessWidget {
                 height: 40,
               ),
               AppCircleButton(
-                onTap: () => Get.offAllNamed("/home"),
+                onTap: () => Get.offAndToNamed("/home"),
                 child: const Icon(
                   Icons.arrow_forward_ios,
                   size: 35,

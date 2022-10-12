@@ -1,11 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:takequiz/bindings/initial_bindings.dart';
 import 'package:takequiz/controllers/theme_controller.dart';
+import 'package:takequiz/firebase_options.dart';
 import 'package:takequiz/routes/app_routes.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   InitialBinding().dependencies();
   runApp(const MyApp());
 }
