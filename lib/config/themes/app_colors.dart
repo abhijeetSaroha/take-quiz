@@ -23,5 +23,9 @@ const mainGradientDark = LinearGradient(
   ],
 );
 
-LinearGradient mainGradient(BuildContext context) =>
-    UIParamaters.isDarkMode(context) ? mainGradientDark : mainGradientLight;
+LinearGradient mainGradient() =>
+    UIParamaters.isDarkMode() ? mainGradientDark : mainGradientLight;
+
+Color customScaffoldColor(BuildContext context) => UIParamaters.isDarkMode()
+    ? const Color(0xFF2e3c62)
+    : const Color.fromARGB(255, 240, 237, 255);

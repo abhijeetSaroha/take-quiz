@@ -30,13 +30,23 @@ class QuestionPaperModel {
             .toList();
 
   QuestionPaperModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> doc)
-      : id = doc.data()!['id'].toString(),
-        title = doc.data()!['title'].toString(),
-        imageUrl = doc.data()!['image_url'].toString(),
-        description = doc.data()!['Description'].toString(),
-        timeSeconds = doc.data()!['time_seconds'] ?? 0,
-        questionCount = doc.data()!['question_count'] ?? 0,
+      : id = doc.data().toString().contains('id') ? doc.get('id') : '',
+        title = doc.data().toString().contains('title') ? doc.get('title') : '',
+        imageUrl = doc.data().toString().contains('imageUrl')
+            ? doc.get('image-url')
+            : '',
+        description = doc.data().toString().contains('description')
+            ? doc.get('description')
+            : '',
+        timeSeconds = doc.data().toString().contains('time_seconds')
+            ? doc.get('time_seconds')
+            : 0,
+        questionCount = doc.data().toString().contains('questions_count')
+            ? doc.get('questions_count')
+            : 0,
         questions = [];
+
+  String timeInMinutes() => "${(timeSeconds / 60).ceil()} mins";
 
   // QuestionPaperModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> json)
   //     : id = json.id,
