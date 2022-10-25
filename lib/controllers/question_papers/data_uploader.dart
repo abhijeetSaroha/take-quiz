@@ -49,7 +49,7 @@ class DataUploader extends GetxController {
     var batch = fireStore.batch();
     for (var paper in questionPapers) {
       batch.set(
-        QuestionPaperRF.doc(paper.id),
+        questionPaperRF.doc(paper.id),
         {
           "title": paper.title,
           "image-url": paper.imageUrl,
