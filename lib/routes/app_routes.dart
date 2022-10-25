@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:takequiz/controllers/question_papers/question_paper_controller.dart';
+import 'package:takequiz/controllers/zoom_drawer_controller.dart';
 import 'package:takequiz/screens/home/home_screen.dart';
 import 'package:takequiz/screens/introduction/introduction.dart';
 import 'package:takequiz/screens/splash/splash_screen.dart';
@@ -21,6 +22,9 @@ class AppRoutes {
             () {
               Get.put(
                 QuestionPaperController(),
+              );
+              Get.put(
+                MyZoomDrawerController(),
               );
             },
           ),

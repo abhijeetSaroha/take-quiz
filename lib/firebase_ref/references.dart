@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:takequiz/models/question_paper_model.dart';
 
 final fireStore = FirebaseFirestore.instance;
 

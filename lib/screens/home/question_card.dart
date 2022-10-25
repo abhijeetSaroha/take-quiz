@@ -98,35 +98,38 @@ class QuestionCard extends StatelessWidget {
                             ),
                           ),
                           Positioned(
-                            bottom: _padding,
-                            right: _padding,
+                            bottom: -_padding,
+                            right: -_padding,
                             //   top: _padding,
                             //   left: _padding,
                             child: GestureDetector(
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
-                                    vertical: 12, horizontal: 20),
+                                  vertical: 12,
+                                  horizontal: 20,
+                                ),
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                        topLeft:
-                                            Radius.circular(cardBorderRadius),
-                                        bottomRight:
-                                            Radius.circular(cardBorderRadius)),
-                                    color: Theme.of(context).primaryColor),
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(cardBorderRadius),
+                                    bottomRight:
+                                        Radius.circular(cardBorderRadius),
+                                  ),
+                                  color: Theme.of(context).primaryColor,
+                                ),
                                 child: const Icon(
                                   AppIcons.trophyOutLine,
                                   color: Colors.white,
                                 ),
                               ),
                             ),
-                          )
+                          ),
                         ],
                       ),
                     ],
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:takequiz/config/themes/app_colors.dart';
 import 'package:takequiz/config/themes/ui_parameters.dart';
 
 TextStyle cardTitles(context) => TextStyle(
@@ -10,3 +11,9 @@ TextStyle cardTitles(context) => TextStyle(
     );
 
 const detailText = TextStyle(fontSize: 12);
+
+const headerText = TextStyle(
+  fontSize: 22,
+  fontWeight: FontWeight.w700,
+  color: onSurfaceTextColor,
+);
