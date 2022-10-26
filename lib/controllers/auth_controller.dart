@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:takequiz/app_logger.dart';
+import 'package:takequiz/firebase_ref/references.dart';
 
 class AuthController extends GetxController {
   late FirebaseAuth _auth;
@@ -39,10 +40,21 @@ class AuthController extends GetxController {
           idToken: _authAccount.idToken,
           accessToken: _authAccount.accessToken,
         );
+
+        await _auth.signInWithCredential(_credential);
+        await saveUser(account);
       }
     } on Exception catch (error) {
       AppLogger.e(error);
     }
+  }
+
+  saveUser(GoogleSignInAccount account) {
+    userRf.doc(account.email).set({
+      "email": account.email,
+      "name": account.displayName,
+      "profilepic": account.photoUrl,
+    });
   }
 
   void navigateToIntroduction() {
