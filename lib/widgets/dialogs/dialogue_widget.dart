@@ -10,9 +10,11 @@ class Dialogs {
     return _singleton;
   }
 
-  Widget questionStartDialogue({required VoidCallback onTap}) {
+  static Widget questionStartDialogue({required VoidCallback onTap}) {
     return AlertDialog(
       content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: const [
           Text(
             "Hi...",
@@ -24,7 +26,14 @@ class Dialogs {
           Text("Please login before you start")
         ],
       ),
-      actions: [TextButton(onPressed: onTap, child: Text("Confirm"))],
+      actions: [
+        TextButton(
+          onPressed: onTap,
+          child: Text(
+            "Confirm",
+          ),
+        ),
+      ],
     );
   }
 }

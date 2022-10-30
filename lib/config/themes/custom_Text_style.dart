@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:takequiz/config/themes/app_colors.dart';
 import 'package:takequiz/config/themes/ui_parameters.dart';

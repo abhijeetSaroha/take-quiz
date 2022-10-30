@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:takequiz/controllers/auth_controller.dart';
 import 'package:takequiz/controllers/theme_controller.dart';
 import 'package:takequiz/services/firebase_storage_service.dart';
-import 'dart:html';
 
 class InitialBinding implements Bindings {
   @override
