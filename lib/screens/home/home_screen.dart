@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
@@ -16,6 +15,8 @@ import 'package:takequiz/widgets/content_area.dart';
 
 class HomeScreen extends GetView<MyZoomDrawerController> {
   const HomeScreen({super.key});
+
+  static const String routeName = '/home';
 
   @override
   Widget build(BuildContext context) {

@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:takequiz/config/themes/app_colors.dart';
 import 'package:takequiz/controllers/auth_controller.dart';
+import 'package:takequiz/widgets/app_circle_button.dart';
 import 'package:takequiz/widgets/common/main_button.dart';
 
 class LoginScreen extends GetView<AuthController> {
@@ -23,6 +24,21 @@ class LoginScreen extends GetView<AuthController> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Stack(
+            //   children: [
+            //     Positioned(
+            //       left: 0,
+            //       top: 0,
+            //       child: AppCircleButton(
+            //         child: const Icon(
+            //           Icons.arrow_back_ios_new_rounded,
+            //           color: Colors.white,
+            //         ),
+            //         onTap: () => Get.back(),
+            //       ),
+            //     ),
+            //   ],
+            // ),
             Image.asset(
               "assets/images/app_splash_logo.png",
               width: 200,
@@ -62,7 +78,7 @@ class LoginScreen extends GetView<AuthController> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
